@@ -27,3 +27,8 @@ def converter_para_wav(input_audio, output_audio="audios/input.wav"):
         print("[ERRO] Falha na conversão FFmpeg")
         print(e.stderr.decode())
         return None
+
+
+# Alias para manter compatibilidade com chamadas antigas
+def converter_audio(input_audio, output_audio="audios/input.wav"):
+    return converter_para_wav(input_audio, output_audio)
